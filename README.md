@@ -6,6 +6,9 @@
 - python3
 - pip
 - docker
+- openjdk/jre
+- dotnet core
+- jack
 
 ## Snap ##
 - code
