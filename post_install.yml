@@ -39,8 +39,15 @@
           - discord
           - gitkraken
           - obs-studio
+        state: present
+    
+    - name: Install NeoVim
+      snap:
+        name:
           - nvim
         state: present
+        classic: yes
+        channel: beta
 
     - name: Install Flatpaks
       flatpak:
