@@ -1,12 +1,12 @@
 - hosts: localhost
   tasks:
-    - include_tasks: Archlinux/tasks.yml
+    - import_tasks: Archlinux/tasks.yml
       when: ansible_facts['os_family']|lower == 'archlinux'
-    - include_playbook: Archlinux/setup.yml
+    - import_playbook: Archlinux/setup.yml
       when: ansible_facts['os_family']|lower == 'archlinux'
-    - include_tasks: Debian/tasks.yml
+    - import_tasks: Debian/tasks.yml
       when: ansible_facts['os_family']|lower == 'debian'
-    - include_playbook: Debian/setup.yml
+    - import_playbook: Debian/setup.yml
       when: ansible_facts['os_family']|lower == 'debian'
 
 
