@@ -1,7 +1,7 @@
 - hosts: localhost
   tasks:
-    - import_tasks: "{{ansible_facts['os_family']}}/tasks.yml"
-    - import_playbook: "{{ ansible_facts['os_family'] }}/setup.yml"
+    - include_tasks: "{{ansible_facts['os_family']}}/tasks.yml"
+    - include_playbook: "{{ ansible_facts['os_family'] }}/setup.yml"
 
     - name: Install native packages
       become: yes
