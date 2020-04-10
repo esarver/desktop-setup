@@ -1,7 +1,5 @@
-- hosts: localhost
-  tasks:
-    - name: Update Debian-based system
-      apt:
-        update_cache: yes
-        upgrade: yes
-      when: ansible_facts['os_family'] == Debian
+- name: Update Debian-based system
+  apt:
+    update_cache: yes
+    upgrade: yes
+  when: ansible_facts['os_family'] == Debian

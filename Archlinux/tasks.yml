@@ -1,7 +1,5 @@
-- hosts: localhost
-  tasks:
-    - name: Update Arch-based system
-      pacman:
-        update_cache: yes
-        upgrade: yes
-      when: ansible_facts['os_family'] == Archlinux
+- name: Update Arch-based system
+  pacman:
+    update_cache: yes
+    upgrade: yes
+  when: ansible_facts['os_family'] == Archlinux
