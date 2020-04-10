@@ -60,9 +60,10 @@
           - pipenv
         state: present
     
-    - name: Install Simple Docker images
-      docker_image:
-        name:
-          - miktex/miktex
-        pull: yes
-        state: present
+    # More setup with docker to make this work. 
+    # - name: Install Simple Docker images
+    #   docker_image:
+    #     name:
+    #       - miktex/miktex
+    #     pull: yes
+    #     state: present
