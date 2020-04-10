@@ -1,0 +1,56 @@
+- hosts: localhost
+  tasks:
+    - name: Get OS specific variables
+      include_vars: "{{ item }}"
+      with_first_round:
+        - "{{ ansible_facts['os_family'] }}/setup.yml"
+
+    - name: Install native packages
+      become: yes
+      package:
+        name: 
+          - "{{snapd}}"
+          - "{{flatpak}}"
+          - "{{python}}"
+          - "{{python-pip}}"
+          - "{{docker}}"
+          - "{{openjdk}}"
+          - "{{openjre}}"
+          - "{{dotnetre}}"
+          - "{{dotnetsdk}}"
+        state: present
+
+    - name: Install snaps with classic confinement
+      snap:
+        name:
+          - code
+          - intellij-idea-community
+        classic: yes
+        state: present
+
+    - name: Install snaps
+      snap:
+        name:
+          - discord
+          - gitkraken
+          - obs-studio
+          - nvim
+      state: present
+
+    - name: Install Flatpaks
+      flatpak:
+        name: com.valvesoftware.Steam
+      state: present
+
+    - name: Install global Pip packages
+      pip:
+        name:
+          - pipenv
+        state: present
+    
+    - name: Install Simple Docker images
+      docker_image:
+        name:
+          - miktex/miktex
+        pull: yes
+        state: present

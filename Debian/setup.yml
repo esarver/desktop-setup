@@ -1,0 +1,9 @@
+snapd: snapd
+flatpak: flatpak
+python: python3
+python-pip: python3-pip
+docker: docker
+openjdk: default-jdk
+openjre: default-jre
+dotnetre: dotnet-runtime-3.1
+dotnetsdk: dotnet-sdk-3.1
