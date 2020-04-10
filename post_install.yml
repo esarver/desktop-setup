@@ -1,11 +1,7 @@
-- include: "{{ansible_facts['os_family']}}/tasks.yml"
-
 - hosts: localhost
   tasks:
-    - name: Get OS specific variables
-      include_vars: "{{ item }}"
-      with_first_round:
-        - "{{ ansible_facts['os_family'] }}/setup.yml"
+    - import_tasks: "{{ansible_facts['os_family']}}/tasks.yml"
+    - import_playbook: "{{ ansible_facts['os_family'] }}/setup.yml"
 
     - name: Install native packages
       become: yes
