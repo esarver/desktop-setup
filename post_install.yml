@@ -40,12 +40,12 @@
           - gitkraken
           - obs-studio
           - nvim
-      state: present
+        state: present
 
     - name: Install Flatpaks
       flatpak:
         name: com.valvesoftware.Steam
-      state: present
+        state: present
 
     - name: Install global Pip packages
       pip:
