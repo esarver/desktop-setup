@@ -1,7 +1,7 @@
 snapd: snapd
 flatpak: flatpak
 python: python
-python-pip: python-pip
+pip: python-pip
 docker: docker
 openjdk: jdk-openjdk
 openjre: jre-openjdk

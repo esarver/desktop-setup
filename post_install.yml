@@ -17,7 +17,7 @@
           - "{{snapd}}"
           - "{{flatpak}}"
           - "{{python}}"
-          - "{{python-pip}}"
+          - "{{pip}}"
           - "{{docker}}"
           - "{{openjdk}}"
           - "{{openjre}}"
