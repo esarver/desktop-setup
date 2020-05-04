@@ -18,7 +18,6 @@
           - "{{flatpak}}"
           - "{{python}}"
           - "{{pip}}"
-          - "{{docker}}"
           - "{{openjdk}}"
           - "{{openjre}}"
           - "{{dotnetre}}"
@@ -39,6 +38,7 @@
           - discord
           - gitkraken
           - obs-studio
+          - docker
         state: present
     
     - name: Install NeoVim
@@ -60,10 +60,8 @@
           - pipenv
         state: present
     
-    # More setup with docker to make this work. 
-    # - name: Install Simple Docker images
-    #   docker_image:
-    #     name:
-    #       - miktex/miktex
-    #     pull: yes
-    #     state: present
+    - name: Install Rustup
+      shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+    - name: Install NVM
+      shell: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
