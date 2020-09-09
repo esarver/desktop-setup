@@ -13,7 +13,7 @@
     - name: Install native packages
       become: yes
       package:
-        name: 
+        name:
           - "{{snapd}}"
           - "{{flatpak}}"
           - "{{python}}"
@@ -36,11 +36,10 @@
       snap:
         name:
           - discord
-          - gitkraken
           - obs-studio
           - docker
         state: present
-    
+
     - name: Install NeoVim
       snap:
         name:
@@ -59,9 +58,13 @@
         name:
           - pipenv
         state: present
-    
+
     - name: Install Rustup
       shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
     - name: Install NVM
       shell: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+    - name: Install vim-plug
+      shell: sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
