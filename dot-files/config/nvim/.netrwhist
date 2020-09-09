@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/esarver/School/CSC501-OS-principles/csc501-lab1/sys'
+let g:netrw_dirhist_9='/home/esarver/School/CSC501-OS-principles/csc501-lab1'
+let g:netrw_dirhist_8='/home/esarver/School/CSC501-OS-principles'
+let g:netrw_dirhist_7='/home/esarver/School/CSC501-OS-principles/csc501-lab1'
+let g:netrw_dirhist_6='/home/esarver/School/CSC501-OS-principles/csc501-lab1/sys'
+let g:netrw_dirhist_5='/home/esarver/School/CSC501-OS-principles/csc501-lab1'
+let g:netrw_dirhist_4='/home/esarver/School/CSC501-OS-principles/csc501-lab1/tty'
+let g:netrw_dirhist_3='/home/esarver/School/CSC501-OS-principles/csc501-lab1'
+let g:netrw_dirhist_2='/home/esarver/School/CSC501-OS-principles/csc501-lab1/sys'
+let g:netrw_dirhist_1='/home/esarver/School/CSC501-OS-principles/csc501-lab1'
